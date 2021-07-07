@@ -1,7 +1,9 @@
 #!/bin/bash
 #
-# Originally written by AC - 2015 <contact@chemaly.com> - sys0dm1n.com
+# Warm up Varnish cache using URLs in Varnish log files
+#
 # process run check, load detection and varnishncsa as data source by Write.cz - 2021 (dev@write.cz)
+# Originally written by AC - 2015 <contact@chemaly.com> - sys0dm1n.com
 #
 
 # check if script is already running
