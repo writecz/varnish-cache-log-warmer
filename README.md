@@ -14,7 +14,7 @@ This script is designed to keep Varnish cache always in best shape. This script 
     $ chmod +x varnish-cache-warmer.sh
     
     # Enable varnish logs
-    $ systemctl enable varnishncsa
+    $ systemctl enable varnishncsa --now
 
     # Add a line to cron job
     $ crontab -e
