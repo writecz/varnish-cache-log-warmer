@@ -1,4 +1,4 @@
-# varnish-cache-warmer
+# varnish-cache-log-warmer
 
 This is a bash script that uses curl to warm up Varnish by targeting URLs from Varnish log.
 
