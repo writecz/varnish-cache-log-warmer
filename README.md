@@ -6,6 +6,7 @@ This script is designed to keep Varnish cache always in best shape. This script 
 
 ## Requirements
 
+- enable Varnish logging to files
 - user running the script must have an access to Varnish logs
 - set up a cron job for maximal operability.
 
