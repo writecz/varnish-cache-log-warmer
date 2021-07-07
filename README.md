@@ -22,5 +22,5 @@ This script is designed to keep Varnish cache always in best shape. This script 
 
 ## Room for improvement
 
-- script is warming up all URLs in Varnish log - hits and passes. This might not be effective.
+- script is trying to warm up all URLs in Varnish log - hits and passes.
 - if you find anything that needs to be improved, let me know.
