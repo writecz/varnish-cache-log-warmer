@@ -1,18 +1,25 @@
 # varnish-cache-warmer
 
-This is a bash script that uses curl to warm up Varnish by targeting the sitemap.xml of the website
+This is a bash script that uses curl to warm up Varnish by targeting URLs from Varnish log.
+
+This script is designed to keep Varnish cache always in best shape. This script traverse top hits in Varnish log, pausing during high system load and stopping at Varnish cache purge. It's recommended to be run as a cron job to keep one instance of the script always running.
 
 ## Requirements
 
-It uses the curl package and the website should have a sitemap.xml to work.
+- user running the script must have an access to Varnish logs
+- set up a cron job for maximal operability.
 
 ## Executing the script
+    $ chmod +x varnish-cache-warmer.sh
+    
+    # Enable varnish logs
+    $ systemctl enable varnishncsa
 
-You can pass as many URLs or IP as you want to the script like this:
-
-    $ sudo chmod +x varnish-cache-warmer.sh
-    $ ./varnish-cache-warmer.sh example1.com example2.com example3.com
+    # Add a line to cron job
+    $ crontab -e
+    * * * * * ~/varnish-cache-warmer.sh
 
 ## Room for improvement
 
-If you happen to find something not to your liking, you are welcome to send a PR.
+- script is warming up all URLs in Varnish log - hits and passes. This might not be effective.
+- if you find anything that needs to be improved, let me know.
