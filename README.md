@@ -24,3 +24,5 @@ This script is designed to keep Varnish cache always in best shape. This script 
 
 - script is trying to warm up all URLs in Varnish log - hits and passes.
 - if you find anything that needs to be improved, let me know.
+
+Originally used at [Motopneu a díly Brno](https://www.moto-kvalitne.cz)
